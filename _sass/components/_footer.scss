@@ -1,0 +1,97 @@
+/*-----------------------
+Footer
+-----------------------*/
+footer{
+  display: inline-block;
+
+  text-align: center;
+  width: 100%;
+
+}
+
+.footer-nav{
+  @include rem(padding, 40px 20px);
+  display: inline-block;
+  width: 100%;
+
+  @include media($tablet-landscape){
+    @include rem(padding, 0px 20px);
+    @include rem(margin-bottom, -50px);
+  }
+
+  a{
+    color: $grey-light;
+    @include s-small;
+
+    &:hover{
+      color: $grey-base;
+    }
+  }
+}
+
+.footer-menu{
+  li{
+    display: inline-block;
+    @include rem(margin, 0px 15px);
+  }
+}
+
+/*-----------------------
+Social Media
+-----------------------*/
+.social-media{
+  @include rem(margin-top, 20px);
+
+  li{
+    display: inline-block;
+    @include transition(all 0.3s ease-in-out);
+    opacity: 0.3;
+    width: inherit;
+
+    &:hover{
+      opacity: 0.6;
+    }
+
+    @include media($tablet-landscape){
+      @include rem(margin, -5px 5px 0px);
+    }
+  }
+}
+
+/*-----------------------
+Company
+-----------------------*/
+.company{
+  border-top: 1px solid $white-med;
+  @include rem(padding, 20px);
+
+  @include media($tablet-landscape){
+    border: none;
+    @include rem(padding, 30px 20px 50px);
+  }
+
+  p{
+    color: $grey-base;
+    opacity: 0.4;
+    margin-bottom: 0px;
+
+    @include media($tablet-landscape){
+       margin-top: -8px;
+    }
+  }
+
+  li{
+    display: inline-block;
+
+    a{
+      opacity: 0.4;
+      font-weight: normal;
+      @include rem(margin, 0px 5px);
+      @include s-tiny;
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}

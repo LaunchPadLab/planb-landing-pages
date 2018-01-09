@@ -1,0 +1,91 @@
+// Buttons Component Styles
+// ========================================
+
+// Main Button
+@mixin button{
+  display: inline-block;
+  @include font-type($secondary-sans-serif, normal, $bold);
+  @include rem(padding, 13px);
+  @include s-base;
+  @include transition (all 0.3s ease-in-out);
+  line-height: 1.6;
+  text-align: center;
+  height: 55px;
+  min-width: 215px;
+  box-shadow: 0 1px 20px 0 rgba(0,0,0,0.3);
+  text-decoration: none;
+
+  text{
+    align: center;
+    decoration: none;
+  }
+  -webkit-appearance: none;
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:focus{
+    border: none;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+// Buton Sizes
+.button-small {
+  @include rem(padding, 5px 6px);
+  @include s-small;
+}
+
+.button-large {
+   @include rem(padding, 15px 12px);
+}
+
+// Button Styles
+@each $button in $buttons{
+  $type:        nth($button, 1);
+  $bg-1:        nth($button, 2);
+  $border:      nth($button, 3);
+  $color:       nth($button, 4);
+  $hover-bg:    nth($button, 5);
+  $hover-color: nth($button, 6);
+
+  .button-#{$type}{
+    background-color: $bg-1;
+    color: $color;
+    @include button;
+
+    &:hover{
+      background-color: $hover-bg;
+      color: $hover-color;
+      opacity: 1;
+      box-shadow: 0 1px 7px 0 rgba(109, 109, 109, 0.5);
+    }
+
+    &:active{
+      background-color: $hover-bg;
+      border: 1px solid $hover-bg;
+      color: darken($hover-color, 5%);
+    }
+
+    &:focus{ border: none; color: darken($hover-color, 5%); }
+  }
+
+  // Links
+  .link-#{$type}{
+    color: $bg-1;
+    display: inline-block;
+    @include font-type($primary-sans-serif, normal, $bold);
+    @include transition(all 0.3s ease-in-out);
+    @include rem(margin-top, 15px);
+    @include rem(padding-bottom, 3px);
+    text-decoration: none;
+
+    &:hover{
+      color: $bg-1;
+      opacity: 0.6;
+    }
+  }
+}
+

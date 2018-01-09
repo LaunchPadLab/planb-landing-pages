@@ -1,0 +1,72 @@
+.page-header {
+  background-size: cover;
+  height: auto;
+
+  @include media($tablet){
+    min-height: 100vh;
+  }
+
+  h1, p, h4 { color: $white-base; }
+
+  p{
+    font-size: 16px;
+  }
+
+  .button{
+    background-color: #f5831f;
+    background-image: -webkit-linear-gradient(270deg, #f9a85e, #f78d2b 33%, #f3701c);
+    background-image: linear-gradient(180deg, #f9a85e, #f78d2b 33%, #f3701c);
+    border-radius: 8px;
+    box-shadow: none;
+    color: $white-base;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding: 12px 40px;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, .72);
+
+    .arrow{
+      color: $white-base;
+      @include rem(margin-left, 10px);
+      font-size: 14px;
+    }
+  }
+}
+
+.page-header{
+  position: relative;
+  text-align: center;
+
+  .header-container{
+    @include media($tablet-landscape){
+      height: 100vh;
+    }
+  }
+
+  .header-text{
+    @include animation(fade-in 0.6s ease-in);
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    @include rem(padding, 100px 30px 50px);
+
+    @include media($tablet){
+      margin-top: 70px;
+      max-width: 700px;
+      @include vertical-horizontal-center;
+      width: 100%;
+    }
+
+    h1{
+      margin: 0 auto inherit;
+      @include rem(margin-top, 30px);
+
+      @include media($tablet-landscape){
+        @include rem(margin-top, 10px);
+      }
+    }
+  }
+}
+

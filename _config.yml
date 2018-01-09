@@ -1,0 +1,33 @@
+---
+title: Virtual Summits
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    permalink: "/posts/:title/"
+    tag:
+    - product news
+    - tips and tricks
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+permalink: pretty
+exclude:
+- config.ru
+- Gemfile
+- Gemfile.lock
+- Procfile
+- vendor
+- Rakefile

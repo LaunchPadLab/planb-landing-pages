@@ -1,0 +1,168 @@
+// Site Navigation Styles
+// ========================================
+$mobile-nav-height: 58px;
+$desktop-nav-height: 81px;
+
+.navigation-wrapper{
+  @include position(absolute, 0px 0px null 0px);
+  text-align: center;
+  width: 100%;
+  z-index: 9;
+
+  @include media($tablet) {
+    @include rem(padding, 20px 20px);
+  }
+}
+
+
+/*-----------------------
+Logo
+-----------------------*/
+.logo{
+  @include transition(all 0.3s ease-in-out);
+  width: 210px;
+  @include rem(margin, 20px 20px);
+
+  @include media($tablet) {
+    float: left;
+    @include rem(margin, 0px);
+  }
+
+  &:hover{
+    opacity: 0.5;
+  }
+}
+
+/*-----------------------
+Primary Nav
+-----------------------*/
+.navigation{
+  @include transition(all 0.3s ease-in-out);
+  width: 100%;
+  z-index: 99999999;
+
+  .navigation-menu{
+    float: right;
+    text-align: right;
+    //@include mobile-hide;
+
+    @include media(tablet){
+      @include rem(margin-top, 20px);
+    }
+  }
+
+  li {
+    display: inline-block;
+    @include rem(margin, 0 0 0 25px);
+
+    a{
+      color: $white-base;
+      font-weight: 600;
+      @include s-base;
+      letter-spacing: 0px;
+
+      &:hover{
+        color: $white-base;
+        opacity: 0.6;
+      }
+
+      &.button-white-base{
+        color: $blue-base;
+        height: inherit;
+        min-width: 0px;
+        width: 135px;
+      }
+    }
+  }
+}
+
+/*-----------------------
+Mobile Nav Overlay
+-----------------------*/
+
+.navigation-menu{
+  @keyframes fadeIn { to { opacity: 1; } }
+  @include animation(fadeIn .3s ease-in 1 forwards);
+  display: none;
+  opacity: 0;
+
+  @include media($tablet) {
+    @include animation(none);
+    opacity: 1;
+    display: block;
+  }
+
+  a{
+    @include media($tablet) {
+      @include s-tiny;
+      color: $grey-base;
+      letter-spacing: 1px;
+      font-weight: bold;
+
+      &:hover{ color: $grey-dark; }
+    }
+
+    @include media($tablet-landscape) {
+      @include s-small;
+    }
+  }
+
+  &.active{
+    background-color: $blue-dark;
+    display: block;
+    height: 100%;
+    @include position(fixed, 0px 0px 0px null);
+    width: 100%;
+    z-index: 3;
+    padding-top: 60px;
+
+    li{
+      width: 100%;
+      margin: 0px;
+      @include rem(padding, 20px);
+    }
+
+    .nav-link{
+      text-align: center;
+      @include s-large;
+      display: inline-block;
+      width: 100%;
+      margin: 0;
+
+      a{
+        color: $white-base;
+        @include rem(padding, 20px 0);
+        @include s-bigger;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 0px;
+      }
+    }
+  }
+}
+
+// Open and Close Buttons
+.nav-open, .nav-close{
+  cursor: pointer;
+  @include transition(all 0.3s ease-in-out);
+
+  &:hover{ opacity: 0.8; }
+  @include media($tablet) { display: none; }
+}
+
+.nav-open{
+  height: 30px;
+  width: 30px;
+}
+
+.nav-open{
+  @include position(absolute, 25px 20px null null);
+  z-index: 2;
+}
+
+.nav-close{
+  //@include rem(margin, 13px 20px 0 0);
+  width: 20px;
+  @include position(absolute, 25px 20px null null);
+}

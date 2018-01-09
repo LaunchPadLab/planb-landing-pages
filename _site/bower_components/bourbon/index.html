@@ -1,0 +1,158 @@
+<p><a href="http://bourbon.io"><img src="http://images.thoughtbot.com/bourbon/bourbon-logo.svg" alt="Bourbon" /></a></p>
+
+<p><a href="https://rubygems.org/gems/bourbon"><img src="http://img.shields.io/gem/v/bourbon.svg?style=flat" alt="Gem Version" /></a>
+<a href="https://codeclimate.com/github/thoughtbot/bourbon"><img src="http://img.shields.io/codeclimate/github/thoughtbot/bourbon.svg?style=flat" alt="Code Climate" /></a>
+<a href="https://gitter.im/thoughtbot/bourbon"><img src="https://img.shields.io/badge/gitter-thoughtbot/bourbon-ae3dd2.svg?style=flat" alt="Gitter chat" /></a>
+<a href="http://stackoverflow.com/questions/tagged/bourbon"><img src="http://img.shields.io/badge/stack%20overflow-bourbon-ae3dd2.svg?style=flat" alt="Stack Overflow" /></a></p>
+
+<h2 id="a-simple-and-lightweight-mixin-library-for-sass">A simple and lightweight mixin library for Sass.</h2>
+
+<p>Bourbon is a library of pure Sass mixins that are designed to be simple and easy to use. No configuration required. The mixins aim to be as vanilla as possible, meaning they should be as close to the original CSS syntax as possible.</p>
+
+<p>The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.</p>
+
+<ul>
+  <li><strong><a href="http://bourbon.io/docs">Documentation</a></strong></li>
+  <li><strong><a href="https://github.com/thoughtbot/bourbon/releases">Changelog</a></strong></li>
+  <li><strong><a href="https://github.com/thoughtbot/bourbon/issues">Issues &amp; Bugs</a></strong></li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li><a href="https://github.com/sass/sass">Sass</a> 3.4+ or <a href="https://github.com/sass/libsass">LibSass</a> 3.1+</li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<p>For command line help, visit our wiki page on Bourbon’s <a href="https://github.com/thoughtbot/bourbon/wiki/Command-Line-Interface">command line interface</a>.</p>
+
+<ol>
+  <li>Install the Bourbon gem using the <a href="https://rubygems.org">RubyGems</a> package manager:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>  gem install bourbon
+</code></pre>
+</div>
+
+<p>Alternatively, you can install Bourbon with <a href="http://bower.io">Bower</a>.</p>
+
+<ol>
+  <li>Install the Bourbon library into the current directory:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>  bourbon install
+</code></pre>
+</div>
+
+<p><strong>Pro Tip:</strong> You can target installation into a specific directory using the <code class="highlighter-rouge">path</code> flag:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>  bourbon install --path my/custom/path/
+</code></pre>
+</div>
+
+<ol>
+  <li>Import Bourbon at the beginning of your stylesheet:</li>
+</ol>
+
+<div class="language-scss highlighter-rouge"><pre class="highlight"><code>  <span class="k">@import</span> <span class="s2">"bourbon/bourbon"</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>It’s not recommended to add or modify the Bourbon files so that you can update them easily.</p>
+
+<h2 id="installation-for-ruby-on-rails-31">Installation for Ruby on Rails 3.1+</h2>
+
+<ol>
+  <li>Add Bourbon to your Gemfile:</li>
+</ol>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="n">gem</span> <span class="s1">'bourbon'</span>
+</code></pre>
+</div>
+
+<ol>
+  <li>Then run:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>  bundle install
+</code></pre>
+</div>
+
+<ol>
+  <li>Restart your server and rename <code class="highlighter-rouge">application.css</code> to <code class="highlighter-rouge">application.scss</code>:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>  mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
+</code></pre>
+</div>
+
+<ol>
+  <li>
+    <p>Delete <em>all</em> Sprockets directives in <code class="highlighter-rouge">application.scss</code> (<code class="highlighter-rouge">require</code>, <code class="highlighter-rouge">require_tree</code> and <code class="highlighter-rouge">require_self</code>) and use Sass’s native <code class="highlighter-rouge">@import</code> instead.</p>
+  </li>
+  <li>
+    <p>Import Bourbon at the beginning of <code class="highlighter-rouge">application.scss</code>. All additional stylesheets should be imported below Bourbon:</p>
+  </li>
+</ol>
+
+<div class="language-scss highlighter-rouge"><pre class="highlight"><code>  <span class="k">@import</span> <span class="s2">"bourbon"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"home"</span><span class="p">;</span>
+  <span class="k">@import</span> <span class="s2">"users"</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p><a href="https://github.com/thoughtbot/bourbon/wiki/Rails-Help-%5C-Undefined-mixin">Help! I’m getting an undefined mixin error.</a></p>
+
+<h2 id="installing-older-versions-of-bourbon">Installing older versions of Bourbon</h2>
+
+<ol>
+  <li>Uninstall any Bourbon gem versions you already have:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>  gem uninstall bourbon
+</code></pre>
+</div>
+
+<ol>
+  <li>Reinstall the Bourbon gem, using the <code class="highlighter-rouge">-v</code> flag to specify the version you need:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>  gem install bourbon -v 3.2.4
+</code></pre>
+</div>
+
+<ol>
+  <li>Follow the <a href="#installation">instructions above</a> to install Bourbon into your project.</li>
+</ol>
+
+<h2 id="browser-support">Browser support</h2>
+
+<ul>
+  <li>Chrome 26+</li>
+  <li>Firefox 29+</li>
+  <li>Internet Explorer 9+</li>
+  <li>Opera 15+</li>
+  <li>Safari 6.1+</li>
+</ul>
+
+<h2 id="the-bourbon-family">The Bourbon family</h2>
+
+<ul>
+  <li><a href="https://github.com/thoughtbot/bourbon">Bourbon</a>: A simple and lightweight mixin library for Sass</li>
+  <li><a href="https://github.com/thoughtbot/neat">Neat</a>: A lightweight semantic grid framework for Sass and Bourbon</li>
+  <li><a href="https://github.com/thoughtbot/bitters">Bitters</a>: Scaffold styles, variables and structure for Bourbon projects</li>
+  <li><a href="https://github.com/thoughtbot/refills">Refills</a>: Prepackaged patterns and components built with Bourbon, Neat and Bitters</li>
+</ul>
+
+<p>Also check out <a href="https://github.com/thoughtbot/proteus">Proteus</a>, a collection of useful starter kits to help you prototype faster. Each kit comes with Bourbon, Neat and Bitters out-of-the-box.</p>
+
+<h2 id="credits">Credits</h2>
+
+<p><a href="http://thoughtbot.com"><img src="http://images.thoughtbot.com/bourbon/thoughtbot-logo.svg" alt="thoughtbot" /></a></p>
+
+<p>Bourbon is maintained and funded by <a href="http://thoughtbot.com">thoughtbot, inc</a>. Tweet your questions or suggestions to <a href="https://twitter.com/bourbonsass">@bourbonsass</a> and while you’re at it follow us too.</p>
+
+<h2 id="license">License</h2>
+
+<p>Copyright © 2011–2015 <a href="http://thoughtbot.com">thoughtbot, inc</a>. Bourbon is free software, and may be redistributed under the terms specified in the <a href="/bower_components/bourbon/LICENSE.md">license</a>.</p>
