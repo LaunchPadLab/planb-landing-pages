@@ -1,10 +1,10 @@
-Kudos Marketing Site
+PlanB Marketing Pages
 ----------------------
 
 Visit ____
 
 ### Local
-1. `jekyll serve --watch` (all changes will be built automatically)
+1. `jekyll serve`
 2. Open `localhost:4000`
 
 ### Production
