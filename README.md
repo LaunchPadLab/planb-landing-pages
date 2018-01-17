@@ -6,7 +6,7 @@ Visit ____
 ## Getting Started
 
 ### Prerequisites
-- Ruby 2.4.2
+- Ruby 2.3.3
 
 ### Running Locally
 - `git clone https://github.com/LaunchPadLab/planb-landing-pages.git`
