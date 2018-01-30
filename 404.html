@@ -1,18 +1,15 @@
 ---
-title: Page Not Found  | Virtual Summits
+title: Page Not Found
 permalink: "/404.html"
 layout: default
 ---
 
-<header class="home-header page-header">
+<header class="page-header" style="background: url('{{ "/images/pexels-photo-106399.jpg" | prepend: site.baseurl }}') no-repeat center; background-size: cover;">
   <div class="header-text">
     <div class="text-block">
       <h1>Oops!</h1>
       <p>Sorry, but the looks like the page you're looking for doesn't exist.</p><br>
-      <a href="/" class="button-white-base scroll-link">Back to Homepage</a>
+      <a href="/" class="button">Back to Homepage</a>
     </div>
   </div>
 </header>
-
-
-{% include cta.html %}
