@@ -7,6 +7,6 @@ use Rack::SslEnforcer, except_environments: 'development'
 run Rack::Jekyll.new
 
 use Rack::HostRedirect, {
-  'elend-refi.com' => 'https://planb-landing-windows.azurewebsites.net',
-  'elend-review.com' => { host: 'https://planb-landing-windows.azurewebsites.net', path: '/landing2', query: nil }
+  'elend-review.com' => { host: 'planb-landing-windows.azurewebsites.net', path: '/landing2', query: nil }
+  'elend-refi.com' => 'planb-landing-windows.azurewebsites.net',
 }
