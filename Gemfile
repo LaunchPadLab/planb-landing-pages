@@ -2,9 +2,11 @@ ruby '2.3.3'
 
 source 'https://rubygems.org'
 
+gem 'github-pages', group: :jekyll_plugins
 gem 'jekyll'
-gem 'rack-jekyll'
-gem 'rake'
 gem 'puma'
+gem 'rack'
+gem 'rack-host-redirect'
+gem 'rack-jekyll'
 gem 'rack-ssl-enforcer'
-gem "github-pages", group: :jekyll_plugins
+gem 'rake'
