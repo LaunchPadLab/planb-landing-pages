@@ -2,15 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PlanB Mortgages</title>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-<<<<<<< HEAD
-    <pubDate>Wed, 17 Jan 2018 22:55:24 +0000</pubDate>
-    <lastBuildDate>Wed, 17 Jan 2018 22:55:24 +0000</lastBuildDate>
-=======
-    <pubDate>Thu, 18 Jan 2018 15:36:35 +0000</pubDate>
-    <lastBuildDate>Thu, 18 Jan 2018 15:36:35 +0000</lastBuildDate>
->>>>>>> ca59f7764438e4ea49716f92531e0ee7bd58d90c
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 31 Jan 2018 21:02:13 +0000</pubDate>
+    <lastBuildDate>Wed, 31 Jan 2018 21:02:13 +0000</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
   </channel>
