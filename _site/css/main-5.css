@@ -136,6 +136,10 @@ Company
 .company li a { opacity: 0.4; font-weight: normal; margin: 0px 5px; margin: 0px 0.35714rem; font-size: 10px; font-size: 0.71429rem; line-height: 14px; line-height: 1rem; }
 .company li a:hover { opacity: 1; }
 
+.footer-pb-wrapper.legal-links { background-color: #abdae7; }
+.footer-pb-wrapper.legal-links p { font-size: 12px; font-size: 0.85714rem; opacity: 0.5; }
+.footer-pb-wrapper.legal-links a { opacity: 1; font-size: 12px; font-size: 0.85714rem; margin-bottom: 10px; margin-bottom: 0.71429rem; }
+
 .navigation-wrapper { position: absolute; top: 0px; right: 0px; left: 0px; text-align: center; width: 100%; z-index: 9; }
 @media screen and (min-width: 45em) { .navigation-wrapper { padding: 20px 20px; padding: 1.42857rem 1.42857rem; } }
 

@@ -95,3 +95,18 @@ Company
     }
   }
 }
+
+.footer-pb-wrapper.legal-links{
+  background-color: #abdae7;
+
+  p{
+    @include s-small;
+    opacity: 0.5;
+  }
+
+  a{
+    opacity: 1;
+    @include s-small;
+    @include rem(margin-bottom, 10px);
+  }
+}

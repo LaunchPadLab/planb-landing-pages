@@ -4,13 +4,8 @@
     <title>PlanB Mortgages</title>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-<<<<<<< HEAD
-    <pubDate>Wed, 17 Jan 2018 22:55:24 +0000</pubDate>
-    <lastBuildDate>Wed, 17 Jan 2018 22:55:24 +0000</lastBuildDate>
-=======
-    <pubDate>Thu, 18 Jan 2018 15:36:35 +0000</pubDate>
-    <lastBuildDate>Thu, 18 Jan 2018 15:36:35 +0000</lastBuildDate>
->>>>>>> ca59f7764438e4ea49716f92531e0ee7bd58d90c
+    <pubDate>Thu, 01 Feb 2018 18:38:11 +0000</pubDate>
+    <lastBuildDate>Thu, 01 Feb 2018 18:38:11 +0000</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
   </channel>
