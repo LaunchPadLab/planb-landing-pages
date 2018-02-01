@@ -87,16 +87,7 @@ setLatestNodeVersion(){
 # Deployment
 # ----------
 
-echo Ruby on Rails deployment.
-
-# 1. KuduSync
-if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
-  "$KUDU_SYNC_CMD" -v 50 -f "$DEPLOYMENT_SOURCE" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh"
-  exitWithMessageOnError "Kudu Sync failed"
-fi
-
-initializeDeploymentConfig
-
+echo Jekyll deployment.
 echo "$DEPLOYMENT_TARGET"
 if [ -e "$DEPLOYMENT_TARGET/Gemfile" ]; then
   echo "Found gemfile"
@@ -120,16 +111,19 @@ if [ -e "$DEPLOYMENT_TARGET/Gemfile" ]; then
   echo "Running bundle package"
   bundle package --all
   exitWithMessageOnError "bundler failed"
-  # if [ "$ASSETS_PRECOMPILE" == true ]; then
-  #   echo "running rake assets:precompile"
-  #   bundle exec rake --trace assets:precompile
-  #   exitWithMessageOnError "precompilation failed"
-  #   bundle exec rake --trace assets:clean
-  # fi
-
-
+  echo "building Jekyll"
+  bundle exec jekyll build
   popd
 fi
+
+# 1. KuduSync
+if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
+  "$KUDU_SYNC_CMD" -v 50 -f "$DEPLOYMENT_SOURCE" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh"
+  exitWithMessageOnError "Kudu Sync failed"
+fi
+
+initializeDeploymentConfig
+
 
 ##################################################################################################################################
 
