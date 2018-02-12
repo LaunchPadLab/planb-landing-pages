@@ -101,7 +101,9 @@ Report
 }
 
 .report-image{
-  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+  max-width: 405px;
   z-index: 2;
 
   @include media($tablet){
@@ -133,7 +135,7 @@ Report
   .text-block{
     @include media($tablet){
       width: 300px;
-      margin-left: 330px;
+      margin-left: 262px;
     }
 
     p{
@@ -143,13 +145,13 @@ Report
     p strong{
       display: inline-block;
       @include rem(margin-top, 10px);
-      width: 230px;
+      max-width: 250px;
     }
   }
 
   .violator{
-    @include position(absolute, 0px 0px null null);
-    width: 100px;
+    @include position(absolute, -6px -5px null null);
+    width: 185px;
   }
 }
 
@@ -165,9 +167,9 @@ Report
 
   .footnote{
     float: right;
-    @include rem(margin-top, 15px);
+    @include rem(margin-top, 25px);
     text-align: right;
-    width: 300px;
+    max-width: 460px;
   }
 }
 
