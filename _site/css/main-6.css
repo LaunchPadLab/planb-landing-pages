@@ -136,6 +136,10 @@ Company
 .company li a { opacity: 0.4; font-weight: normal; margin: 0px 5px; margin: 0px 0.35714rem; font-size: 10px; font-size: 0.71429rem; line-height: 14px; line-height: 1rem; }
 .company li a:hover { opacity: 1; }
 
+.footer-pb-wrapper.legal-links { background-color: #abdae7; }
+.footer-pb-wrapper.legal-links p { font-size: 12px; font-size: 0.85714rem; opacity: 0.5; }
+.footer-pb-wrapper.legal-links a { opacity: 1; font-size: 12px; font-size: 0.85714rem; margin-bottom: 10px; margin-bottom: 0.71429rem; }
+
 .navigation-wrapper { position: absolute; top: 0px; right: 0px; left: 0px; text-align: center; width: 100%; z-index: 9; }
 @media screen and (min-width: 45em) { .navigation-wrapper { padding: 20px 20px; padding: 1.42857rem 1.42857rem; } }
 
@@ -272,21 +276,21 @@ Report
 .report-pb-container header { text-align: center; }
 .report-pb-container header p { display: block; margin-left: auto; margin-right: auto; width: 100%; max-width: 90%; }
 
-.report-image { max-width: 500px; z-index: 2; }
+.report-image { display: block; margin: 0 auto; max-width: 405px; z-index: 2; }
 @media screen and (min-width: 45em) { .report-image { position: absolute; top: -50px; left: -50px; } }
 
 .colored-text-block { background-color: #039abe; display: inline-block; padding: 30px; padding: 2.14286rem; position: relative; width: 100%; }
 .colored-text-block h4, .colored-text-block span, .colored-text-block p { color: #FFFFFF; text-align: center; }
 .colored-text-block h4 span, .colored-text-block span span, .colored-text-block p span { font-size: 23px; font-weight: 700; }
 @media screen and (min-width: 45em) { .colored-text-block h4 span, .colored-text-block span span, .colored-text-block p span { font-size: 43px; } }
-@media screen and (min-width: 45em) { .colored-text-block .text-block { width: 300px; margin-left: 330px; } }
+@media screen and (min-width: 45em) { .colored-text-block .text-block { width: 300px; margin-left: 262px; } }
 .colored-text-block .text-block p { margin: 0px; }
-.colored-text-block .text-block p strong { display: inline-block; margin-top: 10px; margin-top: 0.71429rem; width: 230px; }
-.colored-text-block .violator { position: absolute; top: 0px; right: 0px; width: 100px; }
+.colored-text-block .text-block p strong { display: inline-block; margin-top: 10px; margin-top: 0.71429rem; max-width: 250px; }
+.colored-text-block .violator { position: absolute; top: -6px; right: -5px; width: 185px; }
 
 .report-block { position: relative; display: block; margin-left: auto; margin-right: auto; width: 100%; max-width: 710px; }
 @media screen and (min-width: 45em) { .report-block { margin-top: 100px; margin-top: 7.14286rem; } }
-.report-block .footnote { float: right; margin-top: 15px; margin-top: 1.07143rem; text-align: right; width: 300px; }
+.report-block .footnote { float: right; margin-top: 25px; margin-top: 1.78571rem; text-align: right; max-width: 460px; }
 
 /*-----------------------
 Report
